@@ -1,4 +1,4 @@
-ctlc-docker-wordpress
+ctlc-docker-haproxy
 ==================
 
 Base docker image to run a WordPress
@@ -7,9 +7,9 @@ Base docker image to run a WordPress
 Usage
 -----
 
-To create the image `ctlc/wordpress`, execute the following command on the ctlc-docker-wordpress folder:
+To create the image `ctlc/haproxy`, execute the following command on the ctlc-docker-haproxy folder:
 
-	sudo docker build -t ctlc/wordpress .
+	sudo docker build -t ctlc/haproxy .
 
 Running the Serf agent
 ------------------------
@@ -24,6 +24,6 @@ It will store the new container ID (like `d35bf1374e88`) in $ID. Get the allocat
 
 It will print the allocated port (like 4751). Test your deployment:
 
-	curl http://0.0.0.0:4751/readme.html
+	curl http://0.0.0.0:4751/
 
 Done!
