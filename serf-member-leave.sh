@@ -8,7 +8,4 @@ while read line; do
     sed -i'' "/\${NAME} /d" /etc/haproxy/haproxy.cfg
 done
 
-if [ -a /var/run/haproxy.pid ]
-then 
-    haproxy -f /etc/haproxy/haproxy.cfg -p /var/run/haproxy.pid -sf $(cat /var/run/haproxy.pid)
-fi
+service haproxy reload

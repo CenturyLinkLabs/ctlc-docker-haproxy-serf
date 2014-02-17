@@ -11,6 +11,7 @@ ADD https://dl.bintray.com/mitchellh/serf/0.4.1_linux_amd64.zip serf.zip
 RUN unzip serf.zip
 RUN mv serf /usr/bin/
 
+ADD enabled /etc/default/haproxy
 ADD haproxy.cfg /etc/haproxy/haproxy.cfg
 ADD serf-member-join.sh /serf-member-join.sh
 ADD serf-member-leave.sh /serf-member-leave.sh
