@@ -1,17 +1,17 @@
 #!/bin/bash
-if [ -z "$STATS_USERNAME" ]; then
-    export STATS_USERNAME="admin"
+if [ -z "$HAPROXY_USERNAME" ]; then
+    export HAPROXY_USERNAME="admin"
 fi  
 
-if [ -z "$STATS_URI" ]; then
-    export STATS_URI="/haproxy?stats"
+if [ -z "$HAPROXY_URI" ]; then
+    export HAPROXY_URI="/haproxy?stats"
 fi  
 
-if [ -n "$STATS_PASSWORD" ]
+if [ -n "$HAPROXY_PASSWORD" ]
 then
   echo "	stats enable\n" >> /etc/haproxy/haproxy.cfg
-  echo "	stats auth $STATS_USERNAME:$STATS_PASSWORD\n" >> /etc/haproxy/haproxy.cfg
-  echo "	stats uri $STATS_URI\n" >> /etc/haproxy/haproxy.cfg
+  echo "	stats auth $HAPROXY_USERNAME:$HAPROXY_PASSWORD\n" >> /etc/haproxy/haproxy.cfg
+  echo "	stats uri $HAPROXY_URI\n" >> /etc/haproxy/haproxy.cfg
 fi
 
 service haproxy start
