@@ -9,9 +9,9 @@ fi
 
 if [ -n "$HAPROXY_PASSWORD" ]
 then
-  echo "	stats enable\n" >> /etc/haproxy/haproxy.cfg
-  echo "	stats auth $HAPROXY_USERNAME:$HAPROXY_PASSWORD\n" >> /etc/haproxy/haproxy.cfg
-  echo "	stats uri $HAPROXY_URI\n" >> /etc/haproxy/haproxy.cfg
+  echo "	stats enable" >> /etc/haproxy/haproxy.cfg
+  echo "	stats auth $HAPROXY_USERNAME:$HAPROXY_PASSWORD" >> /etc/haproxy/haproxy.cfg
+  echo "	stats uri $HAPROXY_URI" >> /etc/haproxy/haproxy.cfg
 fi
 
 service haproxy start
