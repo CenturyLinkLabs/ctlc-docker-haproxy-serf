@@ -12,7 +12,8 @@ RUN unzip serf.zip
 RUN mv serf /usr/bin/
 
 ADD haproxy.conf /etc/haproxy/haproxy.conf
-ADD serf-event-handler.sh /serf-event-handler.sh
+ADD serf-member-join.sh /serf-member-join.sh
+ADD serf-member-leave.sh /serf-member-leave.sh
 
 ADD /start-haproxy.sh /start-haproxy.sh
 ADD /start-serf.sh /start-serf.sh
