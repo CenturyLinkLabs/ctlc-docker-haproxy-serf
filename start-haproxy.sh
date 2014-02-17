@@ -15,4 +15,4 @@ then
 fi
 
 service haproxy start
-exec yes > /dev/null
+exec (yes && sleep 999999) > /dev/null
