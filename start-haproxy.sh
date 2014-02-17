@@ -14,5 +14,4 @@ then
   echo "	stats uri $HAPROXY_URI" >> /etc/haproxy/haproxy.cfg
 fi
 
-service haproxy start
-exec (yes && sleep 999999) > /dev/null
+exec service haproxy start
