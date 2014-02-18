@@ -1,7 +1,7 @@
 ctlc-docker-haproxy
 ==================
 
-Base docker image to run a Haproxy with Serf
+Base docker image to run a HAProxy with Serf
 
 
 Usage
