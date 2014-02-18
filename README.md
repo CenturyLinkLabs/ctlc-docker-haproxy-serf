@@ -1,7 +1,7 @@
 ctlc-docker-haproxy
 ==================
 
-Base docker image to run a WordPress
+Base docker image to run a Haproxy with Serf
 
 
 Usage
